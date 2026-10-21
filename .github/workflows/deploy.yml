@@ -27,7 +27,7 @@ jobs:
         run: nix flake show
 
       - name: Build Project
-        run: make
+        run: nix build github:nix-ontouchstart/nix-ontouchstart-aarch64-linux-ai-generated-nix-rust-wasm-playground&&cp result/* .&&rm -rf result
 
       - name: Upload Build Artifacts
         uses: actions/upload-pages-artifact@v5
