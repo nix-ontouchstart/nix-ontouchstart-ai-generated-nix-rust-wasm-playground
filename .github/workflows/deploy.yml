@@ -19,12 +19,12 @@ jobs:
 
       - name: Platform
         run: uname -a
+
       - name: install nix from https://github.com/DeterminateSystems/nix-installer/releases/download/v3.23.3/nix-installer.sh
         run: cat nix-installer.sh | sh -s -- install --no-confirm
+
       - name: nix version
         run: nix --version
-      - name: nix flake show
-        run: nix flake show
 
       - name: Build Project
         run: nix build github:nix-ontouchstart/nix-ontouchstart-aarch64-linux-ai-generated-nix-rust-wasm-playground&&cp result/* .&&rm -rf result
@@ -36,4 +36,3 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v5
-
