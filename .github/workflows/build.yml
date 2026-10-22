@@ -1,9 +1,9 @@
-# https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2604-Arm64-Readme.md
-name: aarch64-linux
+# https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2604-Readme.md
+name: x86_64-linux
 on: push
 jobs:
   build:
-    runs-on: ubuntu-26.04-arm
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v7
       - name: Platform
