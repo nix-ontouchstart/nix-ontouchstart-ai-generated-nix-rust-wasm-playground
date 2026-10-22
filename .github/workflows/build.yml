@@ -1,0 +1,22 @@
+# https://github.com/actions/runner-images/blob/main/images/macos/macos-26-arm64-Readme.md
+name: aarch64-darwin
+on: push
+jobs:
+  build:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v7
+      - name: Platform
+        run: uname -a
+      - name: install nix from https://github.com/DeterminateSystems/nix-installer/releases/download/v3.23.3/nix-installer.sh
+        run: cat nix-installer.sh | sh -s -- install --no-confirm
+      - name: nix version
+        run: nix --version
+      - name: rustc/cargo versions
+        run: |
+          nix develop --command rustc --version
+          nix develop --command cargo --version
+      - name: nix flake show
+        run: nix flake show
+      - name: nix build
+        run: nix build
