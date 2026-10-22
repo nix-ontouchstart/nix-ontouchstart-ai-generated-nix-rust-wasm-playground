@@ -1,9 +1,9 @@
-# https://github.com/actions/runner-images/blob/main/images/macos/macos-26-arm64-Readme.md
-name: aarch64-darwin
+# https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2604-Arm64-Readme.md
+name: aarch64-linux
 on: push
 jobs:
   build:
-    runs-on: macos-26
+    runs-on: ubuntu-26.04-arm
     steps:
       - uses: actions/checkout@v7
       - name: Platform
