@@ -20,7 +20,7 @@ jobs:
         run: nix --version
       - name: Build Project
         run: |
-          nix build github:nix-ontouchstart/nix-ontouchstart-generated-nix-rust-wasm-playground/x86_64-linux
+          nix build github:nix-ontouchstart/nix-ontouchstart-ai-generated-nix-rust-wasm-playground/x86_64-linux
           ls -l result
           ls result
           cp result/* .
