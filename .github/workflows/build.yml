@@ -21,4 +21,5 @@ jobs:
       - name: nix build
         run: |
           nix build
+          ls -l result
           ls result
