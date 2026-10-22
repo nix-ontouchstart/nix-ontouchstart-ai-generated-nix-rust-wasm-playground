@@ -19,4 +19,6 @@ jobs:
       - name: nix flake show
         run: nix flake show
       - name: nix build
-        run: nix build
+        run: |
+          nix build
+          ls result
